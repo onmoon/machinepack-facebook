@@ -44,8 +44,9 @@ module.exports = {
     // GET projects/ and send the api token as a header
     doJSONRequest({
       method: 'get',
-      url: '/v2.1/me',
+      url: '/me',
       data: {
+        'fields': 'email',
         'access_token': inputs.accessToken
       },
       headers: {},
